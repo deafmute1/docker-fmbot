@@ -10,7 +10,7 @@ ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
 ADD  https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb /tmp/ 
 ADD  https://github.com/fmbot-discord/fmbot/releases/latest/download/BinaryFiles.zip /tmp/  
 ADD  https://github.com/fmbot-discord/fmbot/releases/latest/download/BinaryRelease.zip /tmp/ 
-RUN dpkg -i /tmp/packages-microsoft-prod.deb 
+RUN dpkg -i /tmp/packages-microsoft-prod.deb \ 
     && apt-get update \
     && apt-get install -y \
       apt-transport-https \

@@ -1,0 +1,27 @@
+verison: '3'
+
+services:
+  fmbot: 
+    image: deafmute/fmbot 
+    container_name: fmbot
+    volumes:
+      - /path/to/configs:/opt/fmbot/configs 
+    networks: 
+      - internal 
+    restart: always 
+
+  db:
+    image: postgres:13
+    container_name: fmbot-db
+    environment:
+      - POSTGRES_DB=fmbot 
+      - POSTGRES_USER=fmbot 
+      - POSTGRES_PASSWORD=secret
+    volumes:
+      - /path/to/db/data:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+    hostname: db
+    networks:
+      - internal
+    restart: always  
+  
