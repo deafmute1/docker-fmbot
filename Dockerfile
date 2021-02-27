@@ -30,7 +30,7 @@ RUN apt-get update \
 
 VOLUME ["/opt/fmbot/configs"] 
 USER root 
-ENTRYPOINT ["/usr/bin/dotnet, /opt/fmbot/FMBot.Bot.dll"] 
+ENTRYPOINT ["/usr/bin/dotnet", "/opt/fmbot/FMBot.Bot.dll"] 
 
 
 
