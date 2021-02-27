@@ -28,8 +28,9 @@ RUN apt-get update \
       /var/cache/apt/* \
       /var/tmp/* 
 
-VOLUME ["/opt/fmbot/configs"] 
+VOLUME ["/configs"] 
 USER root
+WORKDIR / 
 ENTRYPOINT ["/usr/bin/dotnet", "/opt/fmbot/FMBot.Bot.dll"] 
 
 
