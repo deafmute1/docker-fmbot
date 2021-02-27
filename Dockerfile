@@ -15,8 +15,6 @@ RUN dpkg -i /tmp/packages-microsoft-prod.deb
     && apt-get install -y \
       apt-transport-https \
       ca-certificates \
-      jq \
-      moreutils \ 
       unzip \
       dotnet-sdk-5.0 \ 
     && mkdir /opt/fmbot 
