@@ -17,7 +17,7 @@ RUN dpkg -i /tmp/packages-microsoft-prod.deb \
       ca-certificates \
       unzip \
       dotnet-sdk-5.0 \ 
-    && mkdir /opt/fmbot 
+    && mkdir /opt/fmbot \
     && unzip -o /tmp/BinaryFiles.zip -f /opt/fmbot \ 
     && unzip -o /tmp/BinaryRelease.zip -f /opt/fmbot \
     && apt-get clean \ 
@@ -25,7 +25,7 @@ RUN dpkg -i /tmp/packages-microsoft-prod.deb \
       /tmp/* \
       /var/lib/apt/lists/* \
       /var/cache/apt/* \
-      /var/tmp/* \
+      /var/tmp/* 
 
 # COPY root/ / 
 VOLUME ["/opt/fmbot/configs"] 
