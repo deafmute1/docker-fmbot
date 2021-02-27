@@ -1,6 +1,6 @@
 FROM debian:buster
 LABEL maintainer="me@ethandjeric.com"
-LABEL docker_version="r1"
+LABEL docker_version="r2"
 LABEL version="latest"
 
 ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
@@ -29,7 +29,8 @@ RUN apt-get update \
       /var/tmp/* 
 
 VOLUME ["/opt/fmbot/configs"] 
-USER root 
+USER root
+WORKDIR /opt/fmbot
 ENTRYPOINT ["/usr/bin/dotnet", "/opt/fmbot/FMBot.Bot.dll"] 
 
 
