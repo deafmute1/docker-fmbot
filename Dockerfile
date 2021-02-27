@@ -19,8 +19,8 @@ RUN apt-get update \
     && apt-get install -y dotnet-sdk-5.0 \ 
     # install fmbot 
     && mkdir -p /opt/fmbot \
-    && unzip -o /tmp/BinaryFiles.zip -f /opt/fmbot \ 
-    && unzip -o /tmp/BinaryRelease.zip -f /opt/fmbot \
+    && unzip -o /tmp/BinaryFiles.zip -d /opt/fmbot \ 
+    && unzip -o /tmp/BinaryRelease.zip -d /opt/fmbot \
     && apt-get clean \ 
     && rm -rf \
       /tmp/* \

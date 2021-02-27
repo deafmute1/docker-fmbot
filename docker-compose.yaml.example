@@ -24,4 +24,7 @@ services:
     networks:
       - internal
     restart: always  
-  
+
+networks:
+  internal: 
+    driver: bridge
