@@ -1,0 +1,45 @@
+{
+  "Environment": null,
+  "Discord": {
+    "Token": null,
+    "BotUserId": null
+  },
+  "Database": {
+    "ConnectionString": "Host=localhost;Port=5433;Username=postgres;Password=password;Database=fmbot;Command Timeout=15;Timeout=30;Persist Security Info=True"
+  },
+  "Bot": {
+    "Prefix": ".fm",
+    "BaseServerId": 0,
+    "AnnouncementChannelId": 0,
+    "FeaturedChannelId": 0,
+    "SuggestionChannelId": 0,
+    "ExceptionChannelWebhookUrl": null,
+    "Status": null,
+    "BotWarmupTimeInSeconds": 30,
+    "FeaturedTimerStartupDelayInSeconds": 20,
+    "FeaturedTimerRepeatInMinutes": 60
+  },
+  "LastFm": {
+    "Key": null,
+    "Secret": null,
+    "UserUpdateFrequencyInHours": 24,
+    "UserIndexFrequencyInDays": 120
+  },
+  "Spotify": {
+    "Key": null,
+    "Secret": null
+  },
+  "Genius": {
+    "AccessToken": null
+  },
+  "Google": {
+    "ApiKey": null,
+    "InvidiousUrl": null
+  },
+  "BotLists": {
+    "TopGgApiToken": null,
+    "BotsForDiscordToken": null,
+    "DiscordBoatsToken": null,
+    "BotsOnDiscordToken": null
+  }
+}
