@@ -34,6 +34,3 @@ VOLUME ["/opt/fmbot/configs"]
 USER root 
 WORKDIR /opt/fmbot
 ENTRYPOINT ["/entrypoint.sh"] 
-
-
-
