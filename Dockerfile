@@ -19,8 +19,8 @@ RUN apt-get update \
     && apt-get install -y dotnet-sdk-5.0 \ 
     # install fmbot 
     && mkdir -p /opt/fmbot \
-    && unzip -o /tmp/BinaryFiles.zip -d /opt/fmbot \ 
-    && unzip -o /tmp/BinaryRelease.zip -d /opt/fmbot \
+    && unzip -o /tmp/BinaryRelease.zip -d /opt/fmbot \ 
+    && unzip -o /tmp/BinaryFiles.zip -d /opt/fmbot \
     && apt-get clean \ 
     && rm -rf \
       /tmp/* \
@@ -28,10 +28,10 @@ RUN apt-get update \
       /var/cache/apt/* \
       /var/tmp/* 
 
-VOLUME ["/configs"] 
+VOLUME ["/opt/fmbot/configs"] 
 USER root
-WORKDIR / 
-ENTRYPOINT ["/usr/bin/dotnet", "/opt/fmbot/FMBot.Bot.dll"] 
+WORKDIR /opt/fmbot
+ENTRYPOINT ["dotnet", "FMBot.Bot.dll"] 
 
 
 
